@@ -1,2 +1,2 @@
-# demorepo-2
+# responsive-web
 repo-2

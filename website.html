@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New responsive web</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <script src="http://kit.font-awesome.com/a076d05299.js"></script>
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="web.css" />
+  </head>
+  <body>
+    <!-- Menu section -->
+    <div class="header">
+      <a href="#default" class="logo">MathewCodex</a>
+      <div class="header-right">
+        <a class="active" href="#home">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">Services</a>
+        <a href="#about">About</a>
+      </div>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <span
+        class="bars"
+        style="font-size: 30px; cursor: pointer"
+        onclick="openNav()"
+        >&#9776;</span
+      >
+    </div>
+
+    <!-- <div style="padding-left: 20px">
+        <h1>Responsive Header</h1>
+        <p>Resize the browser window to see the effect.</p>
+        <p>Some content..</p>
+      </div> -->
+    <!-- Show Case Section -->
+    <section class="bg-dark text-light p-5 tx-center text-sm-start">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>
+              Welcome to Nature <span class="text-success">Love web</span>
+            </h1>
+            <p classs="lead my-4">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. A maxime
+              qui odio praesentium earum dicta at labore saepe odit alias?
+            </p>
+            <button
+              class="btn btn-success btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#enroll"
+            >
+              Start Nature Tour
+            </button>
+          </div>
+          <img class="img-fluid w-50 d-none d-sm-block" src="leaf.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+     <!-- Modal -->
+     <div
+     class="modal fade"
+     id="enroll"
+     data-bs-backdrop="static"
+     data-bs-keyboard="false"
+     tabindex="-1"
+     aria-labelledby="enrollLabel"
+     aria-hidden="true"
+   >
+     <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="staticBackdropLabel">Book Your Own Nature Form</h5>
+
+           <button
+             type="button"
+             class="btn-close"
+             data-bs-dismiss="modal"
+             aria-label="Close"
+           ></button>
+         </div>
+         <div class="modal-body">
+           <p class="lead">Fill Out this form</p>
+           <form action="">
+             <div class="mb-3">
+               <label for="first-name" class="col-form-label"
+                 >FirstName:</label
+               >
+               <input type="text" class="form-control" id="first-name"  />
+             </div>
+             <div class="mb-3">
+               <label for="last-name" class="col-form-label">lastName:</label>
+               <input type="text" class="form-control" id="last-name" />
+             </div>
+             <div class="mb-3">
+               <label for="first-name" class="col-form-label">Email:</label>
+               <input type="text" class="form-control" id="last-name" />
+             </div>
+           </form>
+         </div>
+         <div class="modal-footer">
+           <button
+             type="button"
+             class="btn btn-secondary"
+             data-bs-dismiss="modal"
+           >
+             Close
+           </button>
+           <button type="button" class="btn btn-danger">Submit</button>
+         </div>
+       </div>
+     </div>
+   </div>
+    <!-- End of Modal -->
+    <!-- Container for the image gallery -->
+    <div class="bg-dark">
+      <div class="container bg-dark image-slide">
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="leaf.jpg" style="width: 90%; height: 30em" class="shift" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img
+            src="roadand moon.jpg"
+            style="width: 90%; height: 30em"
+            class="shift"
+          />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="route.jpg" style="width: 90%; height: 30em" class="shift" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img
+            src="treelake.jpg"
+            style="width: 90%; height: 30em"
+            class="shift"
+          />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img
+            src="mountainsea.jpg"
+            style="width: 90%; height: 30em"
+            class="shift"
+          />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img
+            src="floathouse.jpg"
+            style="width: 90%; height: 30em"
+            class="shift"
+          />
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+        <a class="next" onclick="plusSlides(1)">&#10095</a>
+
+        <!-- Image text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail images -->
+        <div class="row">
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="leaf.jpg"
+              style="width: 100%; height: 10em"
+              onclick="currentSlide(1)"
+              alt="Leaf"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="roadand moon.jpg"
+              style="width: 100%; height: 10em"
+              onclick="currentSlide(2)"
+              alt="roadandmoon"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="route.jpg"
+              style="width: 100%; height: 10em"
+              onclick="currentSlide(3)"
+              alt="route"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="treelake.jpg"
+              style="width: 100%; height: 10em"
+              onclick="currentSlide(4)"
+              alt="treelake"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="mountainsea.jpg"
+              style="width: 100%; height: 10em"
+              onclick="currentSlide(5)"
+              alt="mountainsea"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="floathouse.jpg"
+              style="width: 100%; height: 10em"
+              onclick="currentSlide(6)"
+              alt="floathouse"
+            />
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <br>
+    <div class="container-fluid">
+      <section class="bg-info text-light p-5">
+        <div class="container">
+          <div class="d-md-flex justify-content-between align-items-center">
+            <h3 class="mb-3 mb-md-0">Sign Up For newsletter</h3>
+            <div class="input-group news-input">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Email"
+              />
+              <button
+                class="btn btn-success btn-lg"
+                type="button"
+                id="button-addon2"
+              >
+                Button
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Team Card -->
+ <!-- Time Line Section -->
+ <br>
+ <div class="container-fluid bg-dark">
+ <div class="timeline">
+  
+  
+
+
+  <div class="containerz right">
+    <div class="contents">
+      <h2>2020</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, incidunt?</p>
+    </div>
+  </div>
+</div>
+<div class="timeline">
+  <div class="containerz left">
+    <div class="contents">
+      <h2>2021</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, assumenda.</p>
+    </div>
+  </div>
+  <div class="containerz right">
+    <div class="contents">
+      <h2>2022</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, ullam?</p>
+    </div>
+  </div>
+</div>
+</div>
+ <!-- end -->
+<br>
+<div class="container">
+  <h2 class="text-dark">Responsive "Meet The Team" Section</h2>
+  <p >Meet The Natural Personalities.</p>
+    <div class="row">
+        <div class="columns">
+          <div class="card">
+            <img src="cv1p.JPG" alt="Jane"  class="cards">
+            <div class="container">
+              <h2>Mathew Cole</h2>
+              <p class="title">CEO & Founder</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="columns">
+          <div class="card">
+            <img src="cv1p.JPG" alt="Mike" class="cards">
+            <div class ="container">
+              <h2>Mike Ross</h2>
+              <p class="title">Art Director</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="columns">
+          <div class="card">
+            <img src="oasis.PNG" alt="John"  class="cards">
+            <div class="container">
+              <h2>MathewCodex</h2>
+              <p class="title">Designer</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+
+</div>
+
+
+    <!-- Javascript section -->
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Custom js -->
+    <script src="boot.js"></script>
+  </body>
+</html>
